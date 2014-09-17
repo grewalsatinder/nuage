@@ -1,2 +1,29 @@
 <h1>Incidents#index</h1>
 <p>Find me in app/views/incidents/index.html.erb</p>
+
+<h1>Listing Incidents</h1>
+ 
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Caller</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @incidents.each do |i| %>
+  <tr>
+    <td><%= i.number %></td>
+    <td><%= i.email %></td>
+    <td><%= i.location %></td>
+    <td><%= link_to "Show", incident_path(i) %></td>
+    <td><%= link_to "Edit", edit_incident_path(i) %></td>
+    <td><%= link_to "Delete", i, method: :delete %></td>
+  
+<% end %>
+</table>
+ 
+<br>
+ 
+<%= link_to "New Incident", "new" %>

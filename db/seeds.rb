@@ -5,4 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-incidents = Incident.create([{number:1,caller:"Vicky",location:"Los Angeles"}])
+incidents = Incident.create([{number:1,caller:"Vicky",location:"Los Angeles"},
+	                         {number:2,satinder:"Satinder",location:"Las vegas"}])

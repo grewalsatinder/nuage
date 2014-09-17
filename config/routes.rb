@@ -1,11 +1,52 @@
 Nuage::Application.routes.draw do
-  get "incidents/index"
-  get "incidents/show"
-  get "incidents/new"
-  get "incidents/create"
-  get "incidents/edit"
-  get "incidents/update"
-  get "incidents/destroy"
+
+  root 'sessions#index'
+
+
+ 
+
+
+  # get "sessions/new"
+  get '/login' => 'sessions#new', as: :sessions
+  # get "sessions/index"
+  # get "sessions/create"
+  post '/login' => 'sessions#create' 
+  # get "sessions/show"
+  # get "sessions/edit"
+  # get "sessions/update"
+  # get "sessions/delete"
+  delete '/logout' =>'sessions#destroy', as: :log_out
+  # get "sessions/destroy"
+  # get "users/new
+  #root 'users#new'
+
+
+    get '/signup'  => 'users#new' , as: :signup
+    get 'users/new' => 'users#new'
+    post 'users/' => 'users#create'
+  # get "users/index"
+  # get "users/create"
+  # get "users/show"
+  # get "users/edit"
+  # get "users/update"
+  # get "users/delete"
+  # get "users/destroy"
+
+  resources :incidents
+  # get 'incidents/' => 'incidents#index'    # => is hashrocket
+  # post 'incidents/' => 'incident#create'
+
+
+  # get 'incidents/new' => 'incidents#new'
+  # get 'incidents/:id' =>  'incidents#show', as: :incident
+
+  # get 'incidents/:id/edit' => 'incidents#edit', as: :edit_incident
+  # patch 'incidents/:id' => 'incidents#update'
+  # delete 'incidents/:id' => 'incidents#destroy'
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,7 +1,7 @@
 class Incident
   include Mongoid::Document
   field :number, type: Integer
-  field :caller, type: String
+  field :number, type: String
   field :location, type: String
   field :category, type: String
   field :subcategory, type: String
@@ -13,4 +13,5 @@ class Incident
   field :urgency, type: Integer
   field :priority, type: Integer
   field :state, type: String
+  
 end

@@ -1,2 +1,15 @@
 <h1>Incidents#show</h1>
 <p>Find me in app/views/incidents/show.html.erb</p>
+
+<h1> <%= @incident.number %> </h1>
+<table>
+	<tr><td>Location </td><td><%= @incident.location %></td></tr>
+    <tr><td>Email</td><td><%= @incident.email%></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+
+</table>
+
+<%= link_to "Back to the list!", incidents_path %><br/>
+<%= link_to "Delete this incident!", @incident, method: :delete, data: { confirm: 'Are
+you sure you want to delete it?' } %>

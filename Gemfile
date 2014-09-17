@@ -11,7 +11,9 @@ gem 'rails', '4.0.4'
 gem 'mongoid', github: 'mongoid/mongoid'
 
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 4.0.2'
+
 
 # RSpec
 group :development, :test do
@@ -54,6 +56,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'autoprefixer-rails'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

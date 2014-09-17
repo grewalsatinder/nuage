@@ -1,2 +1,10 @@
 <h1>Incidents#edit</h1>
 <p>Find me in app/views/incidents/edit.html.erb</p>
+￼<h1> Edit this Incident! </h1>
+<%= form_for @incident do |f| %>
+     Location: <%= f.text_field :location %>
+     Email: <%= f.text_field :email %>
+
+    <%= f.submit "Edit incidents!" %>
+    <% end %>
+ <%= link_to "Back to the list!", incidents_path %>
