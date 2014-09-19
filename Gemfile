@@ -10,9 +10,14 @@ gem 'rails', '4.0.4'
 # Get latest from GitHub
 gem 'mongoid', github: 'mongoid/mongoid'
 
+#makes mongoid.yml file
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 4.0.2'
+
+#Mongoid Slug generates a URL slug or permalink based on one or more fields in a Mongoid model. It sits idly on top of stringex, supporting non-Latin characters.
+gem 'mongoid_slug'
 
 
 # RSpec
@@ -27,6 +32,10 @@ gem 'pry-rails', :group => :development
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# For Paperclip
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk'
 
 
 #################
@@ -60,6 +69,7 @@ end
 gem 'autoprefixer-rails'
 
 
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -68,3 +78,5 @@ gem 'autoprefixer-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_12factor', group: :production  # heroku made it for us to help asset process happen

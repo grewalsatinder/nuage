@@ -1,16 +1,26 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
 <h1>Sign Up!</h1>
+  <p>Errors:
+<ul>
+<% @user.errors.messages.each do |key,value| %>
+<li><%= key %>: <%= value.join(", ") %>
+<% end %>
+</ul></p>
 
+<div id="user-form">
 <%= form_for @user do |f| %>
-     <%= f.label :name %>
-     <%= f.text_field :name %>
 
-     <%= f.label :email %>
-     <%= f.text_field :email %>
+     <%= f.label :name %>
+     <%= f.text_field :name %><br>
+
+     <%= f.label :email %> <%= @user.errors.messages[:email].join(", ") %>
+     <%= f.text_field :email %><br>
 
      <%= f.label :password %>
-     <%= f.text_field :password %>
+     <%= f.text_field :password %><br>
 
      <%= f.submit "Sign Me Up!" %>
 <% end %>
+
+<%= debug(@user.errors) %>

@@ -1,10 +1,77 @@
+<div class="container">
 <h1>Incidents#new</h1>
 <p>Find me in app/views/incidents/new.html.erb</p>
-<%= form_for @incident do |f| %>
-Location: <%= f.text_field :location %>
-Email: <%= f.text_field :email %>
+<%= form_for @incident, class: "form-horizontal" do |f| %>
+</br>
+<%= f.label :number %>
+<%= f.text_field :number, class: 'form-control' %>
+</br>
 
+<%= f.label :caller %>
+Caller: <%= f.text_field :caller, class: 'form-control' %>
+
+</br>
+<%= f.label :location %> 
+<%= f.text_field :location, class: 'form-control' %>
+</br>
+
+<%= f.label :category %> 
+<%= f.text_field :category, class: 'form-control' %>
+</br>
+
+<%= f.label :subcategory %>
+<%= f.text_field :subcategory, class: 'form-control' %>
+</br>
+
+<%= f.label :email %>
+<%= f.text_field :email, class: 'form-control' %>
+</br>
+
+<%= f.label :shortdescription %>
+<%= f.text_field :shortdescription, class: 'form-control' %>
+</br>
+
+<%= f.label :opened %>
+<%= f.text_field :opened, class: 'form-control' %>
+</br>
+
+<%= f.label :openedby %>
+<%= f.text_field :openedby, class: 'form-control' %>
+</br>
+
+<%= f.label :config_item %>
+<%= f.text_field :config_item, class: 'form-control' %>
+</br>
+
+<%= f.label :impact %>
+<%= f.text_field :impact, class: 'form-control' %>
+</br>
+
+<%= f.label :urgency %>
+<%= f.text_field :urgency, class: 'form-control' %>
+</br>
+
+<%= f.label :priority %>
+<%= f.text_field :priority, class: 'form-control' %>
+</br>
+
+<%= f.label :state %>
+<%= f.text_field :state, class: 'form-control' %>
+</br>
+
+<%= f.label :assignment_group %>
+<%= f.text_field :assignment_group, class: 'form-control' %>
+</br>
+
+<%= f.label :assigned_to %>
+<%= f.text_field :assigned_to, class: 'form-control' %>
+</br>
+
+<%= f.label :contact_type %>
+<%= f.text_field :contact_type, class: 'form-control' %>
+</br>
 
 <%= f.submit "Add incidents!" %>
 <% end %>
 <%= link_to "Back to the list!", incidents_path %>
+</div>

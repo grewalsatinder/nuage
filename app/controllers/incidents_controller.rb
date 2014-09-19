@@ -2,7 +2,7 @@ class IncidentsController < ApplicationController
 
   def index 
  
-    @incidents = Incident.all
+    @incidents = Incident.all # using model
     
   end
 

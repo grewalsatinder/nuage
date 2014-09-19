@@ -5,7 +5,9 @@ Nuage::Application.routes.draw do
 
  
 
-
+  #The Rails router recognizes URLs and dispatches them to a controller's action. It can also generate paths and URLs
+  #router to match request to a controller action
+  #GET is verb/Path   Controller#Action(used for)
   # get "sessions/new"
   get '/login' => 'sessions#new', as: :sessions
   # get "sessions/index"
@@ -22,8 +24,8 @@ Nuage::Application.routes.draw do
 
 
     get '/signup'  => 'users#new' , as: :signup
-    get 'users/new' => 'users#new'
-    post 'users/' => 'users#create'
+    get '/users/new' => 'users#new'
+    post '/users' => 'users#create'
   # get "users/index"
   # get "users/create"
   # get "users/show"
@@ -32,17 +34,17 @@ Nuage::Application.routes.draw do
   # get "users/delete"
   # get "users/destroy"
 
-  resources :incidents
-  # get 'incidents/' => 'incidents#index'    # => is hashrocket
-  # post 'incidents/' => 'incident#create'
+  #resources :incidents
+  get '/incidents' => 'incidents#index', as: :incidents   # => is hashrocket
+  post '/incidents' => 'incidents#create'
 
 
-  # get 'incidents/new' => 'incidents#new'
-  # get 'incidents/:id' =>  'incidents#show', as: :incident
+  get '/incidents/new' => 'incidents#new', as: :new_incident
+  get '/incidents/:id' =>  'incidents#show', as: :incident
 
-  # get 'incidents/:id/edit' => 'incidents#edit', as: :edit_incident
-  # patch 'incidents/:id' => 'incidents#update'
-  # delete 'incidents/:id' => 'incidents#destroy'
+  get '/incidents/:id/edit' => 'incidents#edit', as: :edit_incident
+  patch '/incidents/:id' => 'incidents#update'
+  delete '/incidents/:id' => 'incidents#destroy'
 
 
 
