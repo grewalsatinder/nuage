@@ -2,12 +2,17 @@
 <p>Find me in app/views/incidents/show.html.erb</p>
 
 <h1> <%= @incident.number %> </h1>
-<table>
-	<tr><td>Location </td><td><%= @incident.location %></td></tr>
-    <tr><td>Email</td><td><%= @incident.email%></td></tr>
-	<tr><td></td><td></td></tr>
-	<tr><td></td><td></td></tr>
 
+
+<table>
+	<tr><td>Number </td><td><%= @incident.number %></td></tr>
+	<tr><td>Caller </td><td><%= @incident.caller %></td></tr>
+	<tr><td>Location </td><td><%= @incident.location %></td></tr>
+	<tr><td>Category </td><td><%= @incident.category %></td></tr>
+    <tr><td>Email</td><td><%= @incident.email%></td></tr>
+	<tr><td>Short Description</td><td><%= @incident.shortdescription%></td></tr>
+	<tr><td>State</td><td><%= @incident.state%></td></tr>
+	<tr><td>Contact type</td><td><%= @incident.contact_type%></td></tr>
 </table>
 
 <%= link_to "Back to the list!", incidents_path %><br/>
