@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
         if user && user.authenticate(params[:session][:password])
             log_in(user)
-            redirect_to root_path
+            redirect_to incidents_path
         else
             flash[:error] ||= 'Try again.'
             render 'new'

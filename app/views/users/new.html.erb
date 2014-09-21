@@ -1,26 +1,38 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<h1>Sign Up!</h1>
-  <p>Errors:
-<ul>
-<% @user.errors.messages.each do |key,value| %>
-<li><%= key %>: <%= value.join(", ") %>
-<% end %>
-</ul></p>
+<div class="container">
 
-<div id="user-form">
-<%= form_for @user do |f| %>
+
+<h1>Sign Up!</h1>
+ <p> 
+	<ul>
+	<% @user.errors.messages.each do |key,value| %>
+	<li><%= key %>: <%= value.join(", ") %>
+	<% end %>
+	</ul>
+</p>
+
+
+<%= form_for @user, class: "form-horizontal" do |f| %>
 
      <%= f.label :name %>
-     <%= f.text_field :name %><br>
+     <%= f.text_field :name, class: 'form-contol' %><br>
 
      <%= f.label :email %> <%= @user.errors.messages[:email].join(", ") %>
-     <%= f.text_field :email %><br>
+
+     <%= f.text_field :email, class: 'form-contol' %><br>
+
+      <%= f.label :email_confirmation %> <%= @user.errors.messages[:email].join(", ") %>
+     <%= f.text_field :email_confirmation, class: 'form-contol' %><br>
 
      <%= f.label :password %>
-     <%= f.text_field :password %><br>
+     <%= f.text_field :password, class: 'form-contol' %><br>
+
+     <%= f.label :password_confirmation  %><%= @user.errors.messages[:password].join(", ") %>
+     <%= f.text_field :password_confirmation , class: 'form-contol' %><br>
 
      <%= f.submit "Sign Me Up!" %>
+
 <% end %>
 
+
 <%= debug(@user.errors) %>
+</div>

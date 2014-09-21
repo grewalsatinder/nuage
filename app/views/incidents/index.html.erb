@@ -2,9 +2,12 @@
 
 <h1>Listing Incidents</h1>
 
- <div class="container" id="main_container">
+<div class="container" id="main_container">
+<div>Logged in user <%= session[:email]%></div>
+<div ><%= link_to "Log out", log_out_path, method: :delete%></div>
 <table border="1" style="width:920" class="table table-striped">
   <tr>
+    <th>Name</th>
     <th>Number</th>
     <th>Caller</th>
     <th>Location</th>
@@ -22,21 +25,23 @@
     <th>Assignment_group</th>
     <th>Assigned_to</th>
     <th>Isactive</th>
-    <th>Contact_type</th>
+    <th>Contact_type</th> 
 
   </tr>
  
 <% @incidents.each do |i| %>
   
   <tr>
+    <td><%= i.name %></td>
     <td><%= i.number %></td>
-    <td><%= i.email %></td>
     <td><%= i.location %></td>
     <td><%= i.category %></td>
     <td><%= i.subcategory %></td>
+    <td><%= i.email %></td>
     <td><%= i.shortdescription %></td>
-    <td><%= i.config_item %></td>
+    <td><%= i.opened %></td>
     <td><%= i.openedby %></td>
+    <td><%= i.config_item %></td>
     <td><%= i.impact %></td>
     <td><%= i.urgency %></td>
     <td><%= i.priority %></td>
@@ -57,6 +62,6 @@
 </div>
 <br>
  
- <button class="btn btn-info">
+<button class="btn btn-info">
 <%= link_to "New Incident", new_incident_path  %>
 </button>

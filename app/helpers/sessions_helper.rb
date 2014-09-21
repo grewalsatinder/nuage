@@ -8,13 +8,15 @@ module SessionsHelper
     # LOG IN: set user ID cookie in user's browser
     def log_in(user)
         cookies.permanent[:cookie_id] = user.id
-
+        session[:email] = user.email
         @current_user = user
     end
 
     # LOG OUT: remove cookie from user's browser
     def log_out
         cookies.delete(:cookie_id)
+        session[:email] = ""
+
 
     end
 
