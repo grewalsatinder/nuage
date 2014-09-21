@@ -3,28 +3,26 @@
 <h1>Listing Incidents</h1>
 
 <div class="container" id="main_container">
-<div>Logged in user <%= session[:email]%></div>
-<div ><%= link_to "Log out", log_out_path, method: :delete%></div>
+<button class="btn btn-info">
+   User Name: <%= session[:email]%>
+</button>
+<button class="btn btn-info">
+    <%= link_to "Log out", log_out_path, method: :delete%>
+</button>    
+<button class="btn btn-info">
+<%= link_to "New Incident", new_incident_path  %>
+</button>
+
 <table border="1" style="width:920" class="table table-striped">
   <tr>
-    <th>Name</th>
+   
     <th>Number</th>
     <th>Caller</th>
     <th>Location</th>
     <th>Category</th>
-    <th>Subcategory</th>
     <th>Email</th>
     <th>Shortdescription</th>
-    <th>Opened</th>
-    <th>Openedby</th>
-    <th>Config_item</th>
-    <th>Impact</th>
-    <th>Urgency</th>
-    <th>Priority</th>
     <th>State</th>
-    <th>Assignment_group</th>
-    <th>Assigned_to</th>
-    <th>Isactive</th>
     <th>Contact_type</th> 
 
   </tr>
@@ -32,23 +30,14 @@
 <% @incidents.each do |i| %>
   
   <tr>
-    <td><%= i.name %></td>
+    
     <td><%= i.number %></td>
+    <td><%= i.caller %></td>
     <td><%= i.location %></td>
     <td><%= i.category %></td>
-    <td><%= i.subcategory %></td>
     <td><%= i.email %></td>
     <td><%= i.shortdescription %></td>
-    <td><%= i.opened %></td>
-    <td><%= i.openedby %></td>
-    <td><%= i.config_item %></td>
-    <td><%= i.impact %></td>
-    <td><%= i.urgency %></td>
-    <td><%= i.priority %></td>
     <td><%= i.state %></td>
-    <td><%= i.assignment_group %></td>
-    <td><%= i.assigned_to %></td>
-    <td><%= i.isactive %></td>
     <td><%= i.contact_type %></td>
 </div>    
 <div class="row">
@@ -62,6 +51,4 @@
 </div>
 <br>
  
-<button class="btn btn-info">
-<%= link_to "New Incident", new_incident_path  %>
-</button>
+

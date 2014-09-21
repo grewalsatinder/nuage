@@ -3,11 +3,8 @@
 
 <%= form_for @incident, class: "form-horizontal" do |f| %>
 </br>
-<%= f.label :name %>
-<%= f.text_field :name, class: 'form-control' %>
-</br>
 
-</br>
+
 <%= f.label :number %>
 <%= f.text_field :number, class: 'form-control' %>
 </br>
@@ -24,10 +21,6 @@
 <%= f.text_field :category, class: 'form-control' %>
 </br>
 
-<%= f.label :subcategory %>
-<%= f.text_field :subcategory, class: 'form-control' %>
-</br>
-
 <%= f.label :email %>
 <%= f.text_field :email, class: 'form-control' %>
 </br>
@@ -36,45 +29,8 @@
 <%= f.text_field :shortdescription, class: 'form-control' %>
 </br>
 
-<%= f.label :opened %>
-<%= f.text_field :opened, class: 'form-control' %>
-</br>
-
-<%= f.label :openedby %>
-<%= f.text_field :openedby, class: 'form-control' %>
-</br>
-
-<%= f.label :config_item %>
-<%= f.text_field :config_item, class: 'form-control' %>
-</br>
-
-<%= f.label :impact %>
-<%= f.text_field :impact, class: 'form-control' %>
-</br>
-
-<%= f.label :urgency %>
-<%= f.text_field :urgency, class: 'form-control' %>
-</br>
-
-<%= f.label :priority %>
-<%= f.text_field :priority, class: 'form-control' %>
-</br>
-
 <%= f.label :state %>
 <%= f.text_field :state, class: 'form-control' %>
-</br>
-
-<%= f.label :assignment_group %>
-<%= f.text_field :assignment_group, class: 'form-control' %>
-</br>
-
-<%= f.label :assigned_to %>
-<%= f.text_field :assigned_to, class: 'form-control' %>
-</br>
-
-</br>
-<%= f.label :isactive %>
-<%= f.text_field :isactive, class: 'form-control' %>
 </br>
 
 <%= f.label :contact_type %>

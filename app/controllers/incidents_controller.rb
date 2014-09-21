@@ -22,7 +22,7 @@ class IncidentsController < ApplicationController
 
   def create
     
-     @incident = Incident.new(params.require(:incident).permit(:location, :email))
+     @incident = Incident.new(params.require(:incident).permit(:number, :caller, :location, :category , :email, :shortdescription, :state, :contact_type))
       
       if @incident.save
         redirect_to incidents_path
@@ -38,7 +38,7 @@ class IncidentsController < ApplicationController
   def update
      @incident = Incident.find(params[:id])
 
-     if @incident.update_attributes(params.require(:incident).permit(:email, :location))
+     if @incident.update_attributes(params.require(:incident).permit(:number, :caller, :location, :category , :email, :shortdescription, :state, :contact_type))
       redirect_to incidents_path
     else
       render 'edit'
