@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :email_confirmation, :password, :password_confirmation))
      if @user.save
-          # log the user in
+          # Handle a successful save.
           redirect_to login_path
      else
           render 'new'

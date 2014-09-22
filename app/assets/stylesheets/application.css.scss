@@ -16,27 +16,51 @@
  */
 
 
-$navyblue: #000066;
-$lightblue: #E0ECFF;
+$orange: #FF8C69;
+$beige: #EEE5DE;
 
-#main_container {
-	margin-left: 40px;
+
+.header {
+    background: $orange;
+	height: 100px;
+	width: 100%;
+	position: relative;
 }
+
+.navbar {
+	width: 100%;
+	margin: 0px;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+
 .form-control {
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 body {
 	font-family: "Times New Roman", Georgia, Serif;
-	font-size: 18px;
+	font-size: 20px;
 	text-align:center;
-	background: $lightblue;
+	background: $beige;
 }
 
 h1 {
-	font-size: 6.4rem;
+	font-size: 60px;
 	line-height: 1;
 	margin: 1.618rem auto;
 	letter-spacing: -2px;
@@ -53,4 +77,16 @@ ul {
 .table {
 	
 	
+}
+
+
+.footer {
+	background: $orange;
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+
+.dropdown-menu{
+	font-size: 20px;
 }

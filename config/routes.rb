@@ -1,10 +1,8 @@
 Nuage::Application.routes.draw do
 
   root 'sessions#index'
-
-
  
-
+   
   #The Rails router recognizes URLs and dispatches them to a controller's action. It can also generate paths and URLs
   #router to match request to a controller action
   #GET is verb/Path   Controller#Action(used for)

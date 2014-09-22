@@ -1,17 +1,22 @@
-<h1>Incidents#edit</h1>
-<p>Find me in app/views/incidents/edit.html.erb</p>
-￼<h1> Edit this Incident! </h1>
-<%= form_for @incident do |f| %>
-     Number: <%= f.text_field :number %>
-     Caller: <%= f.text_field :caller %>
-     Location: <%= f.text_field :location %>
-     Category: <%= f.text_field :category %>
-     Email: <%= f.text_field :email %>
-     Shortdescription: <%= f.text_field :shortdescription %>
-     State: <%= f.text_field :state %>
-     Contact_type: <%= f.text_field :contact_type %>
+<div class="container">
+     <div class="header">
+   
+     </div>
+
+    <%= form_for @incident, class: "form-horizontal" do |f| %>
+         Number: <%= f.text_field :number, class: 'form-control' %>
+         Caller: <%= f.text_field :caller, class: 'form-control' %>
+         Location: <%= f.text_field :location, class: 'form-control' %>
+         Category: <%= f.text_field :category, class: 'form-control' %>
+         Email: <%= f.text_field :email, class: 'form-control' %>
+         Shortdescription: <%= f.text_field :shortdescription, class: 'form-control' %>
+         State: <%= f.text_field :state, class: 'form-control' %>
+         Contact_type: <%= f.text_field :contact_type, class: 'form-control' %>
 
 
-    <%= f.submit "Edit incidents!" %>
-    <% end %>
- <%= link_to "Back to the list!", incidents_path %>
+        <%= f.submit "Edit incidents!" %>
+        <% end %>
+     <%= link_to "Back to the list!", incidents_path %>
+
+     <div class="footer"></div>
+</div>

@@ -1,19 +1,23 @@
-<h1>Incidents#show</h1>
-<p>Find me in app/views/incidents/show.html.erb</p>
+<div class="container">
+     <div class="header">
+   
+     </div>
 
-<h1> <%= @incident.number %> </h1>
+	<h1> <%= @incident.number %> </h1>
 
 
-<table>
-	<tr><td>Number </td><td><%= @incident.number %></td></tr>
-	<tr><td>Caller </td><td><%= @incident.caller %></td></tr>
-	<tr><td>Location </td><td><%= @incident.location %></td></tr>
-	<tr><td>Category </td><td><%= @incident.category %></td></tr>
-    <tr><td>Email</td><td><%= @incident.email%></td></tr>
-	<tr><td>Short Description</td><td><%= @incident.shortdescription%></td></tr>
-	<tr><td>State</td><td><%= @incident.state%></td></tr>
-	<tr><td>Contact type</td><td><%= @incident.contact_type%></td></tr>
-</table>
+		<table>
+				<tr><td>Number </td><td><%= @incident.number %></td></tr>
+				<tr><td>Caller </td><td><%= @incident.caller %></td></tr>
+				<tr><td>Location </td><td><%= @incident.location %></td></tr>
+				<tr><td>Category </td><td><%= @incident.category %></td></tr>
+			    <tr><td>Email</td><td><%= @incident.email%></td></tr>
+				<tr><td>Short Description</td><td><%= @incident.shortdescription%></td></tr>
+				<tr><td>State</td><td><%= @incident.state%></td></tr>
+				<tr><td>Contact type</td><td><%= @incident.contact_type%></td></tr>
+		</table>
 
-<%= link_to "Back to the list!", incidents_path %><br/>
-<%= link_to "Delete this incident!", @incident, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+	<%= link_to "Back to the list!", incidents_path %><br/>
+	<%= link_to "Delete this incident!", @incident, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+	<div class="footer"></div>
+</div>
