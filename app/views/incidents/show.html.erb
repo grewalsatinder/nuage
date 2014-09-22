@@ -3,10 +3,10 @@
    
      </div>
 
-	<h1> <%= @incident.number %> </h1>
+	<h3> Incident Details </h3>
 
 
-		<table>
+		<table border="1" style="width:920" class="table table-striped">
 				<tr><td>Number </td><td><%= @incident.number %></td></tr>
 				<tr><td>Caller </td><td><%= @incident.caller %></td></tr>
 				<tr><td>Location </td><td><%= @incident.location %></td></tr>
@@ -17,7 +17,8 @@
 				<tr><td>Contact type</td><td><%= @incident.contact_type%></td></tr>
 		</table>
 
-	<%= link_to "Back to the list!", incidents_path %><br/>
+	<%= link_to "Back to the list!", incidents_path %>&nbsp; &nbsp; &nbsp; 
+
 	<%= link_to "Delete this incident!", @incident, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
 	<div class="footer"></div>
 </div>
